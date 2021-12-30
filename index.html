@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <style>
+
+    :root{
+      --soft-blue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+      --main-blue: hsl(217, 54%, 11%);
+      --card-blue: hsl(216, 50%, 16%);
+      --line-blue: hsl(215, 32%, 27%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--main-blue);
+      height: 100vh;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .box{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5em;
+      height: 500px;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      background: var(--card-blue);
+    }
+
+    .top, .center, .bottom{ width: 100%; }
+
+    .top{ 
+      height: 50%; 
+      background: var(--cyan);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .top:hover > .equil_img,
+    .top:active > .equil_img{
+      opacity: 0.5;
+    }
+
+    .top:hover > .equil_view,
+    .top:active > .equil_view{
+      z-index: 1;
+    }
+
+    .equil_img{
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.5s;
+     }
+ 
+     .equil_view{
+        position: absolute;
+        top: 90px;
+        left: 100px;
+        z-index: -1;
+     }
+
+    .center{
+      height: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      box-shadow: 0px 2px 0px 0px var(--line-blue);
+    }
+
+    .equil_head{
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .equil_head:hover, .equil_head:active{ color: var(--cyan);}
+
+    .equil_p{
+      color: var(--soft-blue);
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .center_row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ether_img{
+      width: 10px;
+    }
+    .clock_img{ width: 13px;}
+
+    .ether_p, .clock_p{
+      float: right;
+      margin-left: 5px;
+      font-size: 15px;
+    }
+
+    .ether_p{ color: var(--cyan); }
+
+    .clock_p{ color: var(--soft-blue);}
+
+    .bottom{
+      height: 15%;
+      display: flex;
+      align-items: center;
+    }
+
+    .creat_img{
+      width: 35px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+    }
+
+    .creat_p{
+      margin-left: 10px;
+      font-weight: 300;
+      color: var(--soft-blue);
+      font-size: 15px;
+    }
+
+    span{
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    span:hover, span:active{ color: var(--cyan);}
+    
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="top">
+      <img class="equil_img" src="images/image-equilibrium.jpg" alt="image of nft"/>
+      <img class="equil_view" src="images/icon-view.svg" alt="view icon" />
+    </div>
+    <div class="center">
+      <h2 class="equil_head">Equilibrium #3429</h2>
+      <p class="equil_p">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="center_row">
+        <div class="col_1">
+          <img class="ether_img" src="images/icon-ethereum.svg" alt="icon of ethereum" />
+          <p class="ether_p">0.041ETH</p>
+        </div>
+        <div class="col_2">
+          <img class="clock_img" src="images/icon-clock.svg" alt="icon of clock" />
+          <p class="clock_p">3 days left</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <img class="creat_img" src="images/image-avatar.png" alt="image of creater" />
+      <p class="creat_p">Creation of <span>Jules Wyvern</span></p>
+    </div>
+  </div>
+</body>
+</html>
