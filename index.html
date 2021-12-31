@@ -37,7 +37,7 @@
       font-family: 'Outfit', sans-serif;
     }
 
-    .box{
+    .main{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -157,29 +157,33 @@
 </head>
 <body>
 
-  <div class="box" role="main">
-    <div class="top" role="topContent">
-      <img class="equil_img" src="images/image-equilibrium.jpg" alt="image of nft"/>
-      <img class="equil_view" src="images/icon-view.svg" alt="view icon" />
-    </div>
-    <div class="center" role="centerContent">
-      <h1 class="equil_head">Equilibrium #3429</h1>
-      <p class="equil_p">Our Equilibrium collection promotes balance and calm.</p>
-      <div class="center_row" role="showStats">
-        <div class="col_1" role="showPrice">
-          <img class="ether_img" src="images/icon-ethereum.svg" alt="icon of ethereum" />
-          <p class="ether_p">0.041ETH</p>
-        </div>
-        <div class="col_2" role="showTime">
-          <img class="clock_img" src="images/icon-clock.svg" alt="icon of clock" />
-          <p class="clock_p">3 days left</p>
+  <section>
+    <div class="main">
+      <div class="top">
+        <img class="equil_img" src="images/image-equilibrium.jpg" alt="image of nft"/>
+        <img class="equil_view" src="images/icon-view.svg" alt="view icon" />
+      </div>
+      <div class="center">
+        <h1 class="equil_head">Equilibrium #3429</h1>
+        <p class="equil_p">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="center_row">
+          <div class="col_1">
+            <img class="ether_img" src="images/icon-ethereum.svg" alt="icon of ethereum" />
+            <p class="ether_p">0.041ETH</p>
+          </div>
+          <div class="col_2">
+            <img class="clock_img" src="images/icon-clock.svg" alt="icon of clock" />
+            <p class="clock_p">3 days left</p>
+          </div>
         </div>
       </div>
+      <div class="bottom">
+        <img class="creat_img" src="images/image-avatar.png" alt="image of creater" />
+        <p class="creat_p">Creation of <span>Jules Wyvern</span></p>
+      </div>
     </div>
-    <div class="bottom" role="bottomContent">
-      <img class="creat_img" src="images/image-avatar.png" alt="image of creater" />
-      <p class="creat_p">Creation of <span>Jules Wyvern</span></p>
-    </div>
-  </div>
+  </section>
+
+  
 </body>
 </html>
